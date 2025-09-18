@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    // Variáveis para a Carta 1
-    char estado1[3];
+    // Variáveis para Carta1
+    char estado1;
     char codigo1[4];
     char nomeCidade1[50];
     int populacao1;
@@ -12,8 +12,8 @@ int main() {
     float densidadePopulacional1;
     float pibPerCapita1;
 
-    // Variáveis para a Carta 2
-    char estado2[3];
+    // Variáveis para Carta2
+    char estado2;
     char codigo2[4];
     char nomeCidade2[50];
     int populacao2;
@@ -23,14 +23,14 @@ int main() {
     float densidadePopulacional2;
     float pibPerCapita2;
 
-    // Leitura dos dados da Carta 1
+    // Leitura dos dados Carta1
     printf("Carta 1:\n");
     printf("Estado: ");
-    scanf("%s", estado1);
+    scanf("%s", &estado1);
     printf("Código: ");
-    scanf("%s", codigo1);
+    scanf("%s", &codigo1);
     printf("Nome da Cidade: ");
-    scanf(" %s[^\n]", nomeCidade1); // Lê a linha inteira, incluindo espaços
+    scanf(" %s", &nomeCidade1); 
     printf("População: ");
     scanf("%d", &populacao1);
     printf("Área (km²): ");
@@ -47,11 +47,11 @@ int main() {
     // Leitura dos dados da Carta 2
     printf("\nCarta 2:\n");
     printf("Estado: ");
-    scanf("%s", estado2);
-    printf("Código: ");
-    scanf("%s", codigo2);
+    scanf("%s", &estado2);
+    printf("Codigo: ");
+    scanf("%s", &codigo2);
     printf("Nome da Cidade: ");
-    scanf(" %s[^\n]", nomeCidade2); // Lê a linha inteira, incluindo espaços
+    scanf(" %s", &nomeCidade2); 
     printf("População: ");
     scanf("%d", &populacao2);
     printf("Área (km²): ");
@@ -66,7 +66,7 @@ int main() {
     pibPerCapita2 = (pib2 * 1000000000) / populacao2; // PIB em reais
 
     // Exibição dos dados da Carta 1
-    printf("\nCarta 1:\n");
+    printf("Carta 1:\n");
     printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", nomeCidade1);
@@ -78,7 +78,7 @@ int main() {
     printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     // Exibição dos dados da Carta 2
-    printf("\nCarta 2:\n");
+    printf("Carta 2:\n");
     printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", nomeCidade2);
